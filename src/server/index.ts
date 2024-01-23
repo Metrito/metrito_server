@@ -1,5 +1,5 @@
-import { listen } from './adapters/appListenFunction';
 import { app } from './app';
+import { listen } from './appListenFunction';
 
 const port = process.env.PORT;
 
