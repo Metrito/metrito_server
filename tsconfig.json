@@ -10,6 +10,9 @@
     "paths": {
       "@server/*": ["./src/server/*"],
       "@server": ["./src/server"],
+
+      "@application/*": ["./src/application/*"],
+      "@application": ["./src/application"],
     }
   },
   "exclude": ["node_modules", "dist"]
