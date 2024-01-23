@@ -2,5 +2,8 @@
   "env": {
     "jest": true
   },
-  "extends": "@felipstein/eslint-config-node"
+  "extends": "@felipstein/eslint-config-node",
+  "rules": {
+    "no-use-before-define": "off"
+  }
 }
