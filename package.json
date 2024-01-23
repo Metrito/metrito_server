@@ -31,16 +31,16 @@
     "build": "rm -rf dist && swc src -d dist --copy-files",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "shutdown": "fuser -k 4000/tcp && echo 'Terminated' || echo 'Nothing server instance is running on port 4000'",
-    "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .ts,.tsx src",
     "lint:fix": "eslint --ext .ts,.tsx src --fix",
+    "typecheck": "tsc",
     "preinstall": "npx only-allow npm",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint --ext .ts,.tsx --fix",
-      "tsc --noEmit"
+      "bash -c 'npm run typecheck'",
+      "npm run lint:fix"
     ]
   },
   "dependencies": {
@@ -61,6 +61,7 @@
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "tsx": "^4.7.0"
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
   }
 }

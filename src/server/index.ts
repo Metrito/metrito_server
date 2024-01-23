@@ -1,5 +1,20 @@
+import { listen } from './adapters/appListenFunction';
 import { app } from './app';
 
-const port = 4000;
+const port = process.env.PORT;
 
-app.listen(port, () => console.info(`Server running on port ${port}`));
+/**
+ * Server initialization.
+ *
+ * When starting the server, tests are carried out on vital resources that are
+ * essential for the complete functioning of the server.
+ */
+async function main() {
+  console.info('Starting server...');
+
+  await listen(app, port);
+
+  console.info(`Server is running on port ${port}`);
+}
+
+main();

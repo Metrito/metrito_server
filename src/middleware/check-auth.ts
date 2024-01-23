@@ -2,7 +2,6 @@ import { NextFunction, Response } from 'express';
 import jwt, { TokenExpiredError } from 'jsonwebtoken';
 
 import APIError from 'errors/APIError';
-import ForbiddenError from 'errors/ForbiddenError';
 import UnauthorizedError from 'errors/UnauthorizedError';
 import noAuthDev from 'functions/no-auth-dev';
 
