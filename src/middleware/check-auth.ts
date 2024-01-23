@@ -27,12 +27,12 @@ const checkAuth = async (req: CustomRequest, next: NextFunction) => {
       throw new UnauthorizedError();
     }
 
-    const payload: any = jwt.verify(
+    const payload = jwt.verify(
       token,
       process.env.ACCESS_TOKEN_KEY as string,
-    );
+    ) as jwt.JwtPayload;
 
-    if (!payload.email) {
+    if (!('email' in payload)) {
       throw new UnauthorizedError();
     }
 
