@@ -19,9 +19,10 @@
     },
     "externalHelpers": false,
     "keepClassNames": false,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@server/*": ["server/*"]
+      "@server/*": ["src/server/*"],
+      "@server": ["src/server"]
     }
   },
   "minify": true

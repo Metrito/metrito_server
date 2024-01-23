@@ -7,9 +7,11 @@
     "strict": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@server/*": ["server/*"],
+      "@server/*": ["src/server/*"],
+      "@server": ["src/server"],
     }
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
