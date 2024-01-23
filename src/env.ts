@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import chalk from 'chalk';
 import { ZodError, z } from 'zod';
 
