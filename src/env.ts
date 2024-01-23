@@ -100,7 +100,6 @@ try {
 
 declare global {
   namespace NodeJS {
-    // @ts-ignore
     interface ProcessEnv extends z.infer<typeof envVariablesSchema> {}
   }
 }
