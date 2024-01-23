@@ -1,4 +1,4 @@
-import { NextFunction } from 'express';
+import { NextFunction, Response } from 'express';
 import jwt, { TokenExpiredError } from 'jsonwebtoken';
 
 import APIError from 'errors/APIError';
@@ -11,7 +11,11 @@ import noAuthDev from 'functions/no-auth-dev';
 
 import type CustomRequest from '../@types/express/CustomRequest';
 
-const checkAuth = async (req: CustomRequest, next: NextFunction) => {
+const checkAuth = async (
+  req: CustomRequest,
+  res: Response,
+  next: NextFunction,
+) => {
   try {
     if (noAuthDev()) {
       console.info('NO_AUTH enabled, ignoring authentication');

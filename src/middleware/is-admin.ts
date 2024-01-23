@@ -1,4 +1,4 @@
-import { NextFunction } from 'express';
+import { NextFunction, Response } from 'express';
 
 import ForbiddenError from 'errors/ForbiddenError';
 import noAuthDev from 'functions/no-auth-dev';
@@ -8,7 +8,11 @@ import CustomRequest from '../@types/express/CustomRequest';
 /**
  * Ensure that the user of the request is an administrator.
  */
-const isAdmin = async (req: CustomRequest, next: NextFunction) => {
+const isAdmin = async (
+  req: CustomRequest,
+  res: Response,
+  next: NextFunction,
+) => {
   if (noAuthDev()) {
     console.info('NO_AUTH enabled, ignoring authentication');
 
