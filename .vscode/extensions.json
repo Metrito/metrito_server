@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "remimarche.cspell-tech",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+    "streetsidesoftware.code-spell-checker",
+    "editorconfig.editorconfig",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "ms-vscode.vscode-typescript-next",
+    "orta.vscode-jest",
+    "firsttris.vscode-jest-runner",
+    "unifiedjs.vscode-mdx",
+    "cardinal90.multi-cursor-case-preserve",
+    "yoavbls.pretty-ts-errors",
+    "humao.rest-client"
+  ]
+}

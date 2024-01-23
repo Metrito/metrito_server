@@ -1,0 +1,19 @@
+{
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.fixAll.eslint": "always",
+  },
+  "cSpell.words": [
+    "Advera",
+    "felipstein",
+    "Frederice",
+    "fuser",
+    "metrito",
+    "preinstall",
+    "typecheck"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "env": {
+    "jest": true
+  },
+  "extends": "@felipstein/eslint-config-node"
+}

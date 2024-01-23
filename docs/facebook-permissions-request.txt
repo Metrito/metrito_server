@@ -1,0 +1,91 @@
+facebook-permissions-request.txt
+
+---
+
+Metrito login info:
+
+Email: facebook@metrito.com (We have created this email just for the Facebook team to can access our application and approve our request)
+Password: cCbQ2HyV\*FJRg
+
+---
+
+Facebook Test User login info:
+
+Email: tsoiwqvzpl_1651877534@tfbnw.net
+Password: metrito@fbtestuser2022
+
+---
+
+Instruções:
+
+1. Para ver como a permissão 'ads_read' será usada na nossa aplicação, entre no nosso aplicativo na URL https://indev.metrito.com onde após fazer o login você verá a página de início e um menu no canto superior, vá até a opção com o nome "Facebook", um dropdown será acionado, então clique na opção "Conectar Conta de Anúncio".
+
+2. Nessa página você poderá vincular uma Conta de Anúncios do Facebook à sua empresa (No qual nós já criamos com o nome de 'Facebook'). Ao clicar no botão "Conectar com o Facebook" nós (através do Facebook Javascript SDK) iremos pedir sua autorização a para ter acesso a permissão ads_read em sua conta.
+
+3. Ao autorizar nós listamos as Contas de Anúncio conectadas ao seu perfil do Facebook para que você possa escolher qual deseja conectar ao nosso aplicativo.
+
+4. Após conectar as contas de anúncio que deseja, você poderá criar Dashboards personalizadas com o nosso Builder ou utilizar nossos modelos prontos.
+
+5. Você também poderá utilizar a URL de algum Dashboard que criou para compartilhar com seus clientes e/ou colaboradores. Em seguida deixarei um link de um exemplo de Dashboard: criado com o Metrito.
+
+URL de exemplo: https://indev.metrito.com/
+
+Nosso produto se assemelha muito com outros produtos já autorizados pelo Facebook como o Reportei.com e o Dashgoo.com
+
+
+
+
+Nosso aplicativo utiliza a permissão 'ads_read' para fornecer aos nossos usuários a possibilidade de criar Dashboards personalizados. Com isso eles podem visualizar os dados de suas contas de anúncio e campanhas e compartilhar esse Dashboard com seus clientes para que eles também possam ver como anda os anúncios da empresa.
+
+O vídeo mostra exatamente os passos utilizados para que o usuário autorize e visualize os dados que a permissão dá direito.
+
+- Passos estes que são:
+
+1. Entre no nosso aplicativo na URL https://indev.metrito.com onde após fazer o login você verá a página de início e um menu no canto superior, vá até a opção com o nome "Facebook", um dropdown será acionado, então clique na opção "Conectar Conta de Anúncio".
+
+2. Nessa página você poderá vincular uma Conta de Anúncios do Facebook à sua empresa (No qual nós já criamos com o nome de 'Facebook'). Ao clicar no botão "Conectar com o Facebook" nós (através do Facebook Javascript SDK) iremos pedir sua autorização a para ter acesso a permissão ads_read em sua conta.
+
+3. Ao autorizar nós listamos as Contas de Anúncio conectadas ao seu perfil do Facebook para que você possa escolher qual deseja conectar ao nosso aplicativo.
+
+4. Após conectar as contas de anúncio que deseja, você poderá criar Dashboards personalizadas com o nosso Builder ou utilizar nossos modelos prontos.
+
+5. Você também poderá utilizar a URL de algum Dashboard que criou para compartilhar com seus clientes e/ou colaboradores. Em seguida deixarei um link de um exemplo de Dashboard: criado com o Metrito.
+
+URL de exemplo: https://indev.metrito.com/report/v2/624f471f697edc450a4cb125/624f4a42697edc450a4cb158
+
+
+- Criando um Dashboard:
+
+1. Primeiro clique na opção "Dashboards" no menu superior, um dropdown será acionado, em seguida clique na opção "Novo Dashboard" e você será levado para a página de criação de Dashboard.
+
+2. Selecione a empresa a qual pertencerá o Dashboard (Nesse caso é a empresa de nome Facebook que criamos previamente)
+
+3. Dê um nome para o Dashboard
+
+4. Dê uma descrição para o Dashboard (este passo é opcional)
+
+5. Selecione um template pronto (Template Metrito no Modal que irá abrir) para utilizar. Para selecionar basta clicar no card referente ao template que deseja utilizar.
+
+6. Clique no botão "Criar Dashboard" e pronto.
+
+7. Para abrir o Dashboard você apenas precisa clicar na opção "Meus Dashboards" novamente no dropdown do menu superior e em seguida, após carregada a lista de seus Dashboards, basta clicar no Dashboard que acabou de criar ou no ícone de 'abrir em nova guia' no canto direito da tabela.
+
+8. Com o dashboard aberto em uma nova guia basta selecionar a Conta de Anúncio e o período e em seguida clicar em "Buscar dados" para popular o Dashboard com as informações.
+
+9. OBS.: Como esta Conta de Anúncios acabou de ser criada no perfil do usuário de testes, e nunca veiculou nenhum anúncio, não haverão dados para popular o Dashboard recém criado, porém o funcionamento pode ser visto no link de exemplo apresentado acima.
+
+Muito obrigado por toda a atenção ao ler este documento, a equipe Metrito está ansiosa para poder prover funcionalidades novas para nossos usuários por meio da tecnologia do Facebook!
+
+
+
+GOOGLE ADS VERIFICATION
+
+Nosso aplicativo é totalmente voltado para a criação e compartilhamento de dashboards personalizáveis integrados com ferramentas de marketing como Google Ads e Facebook Ads. Contamos com cerca de 3 mil usuários e a grande maioria pediu muito pela integração com o Google Ads API, após esse apelo nós desenvolvemos essa integração e estamos aguardando a aprovação.
+
+Já somos conectados com a Graph API da Meta e temos uma reputação muito boa na comunidade.
+
+Buscamos causar um grande impacto gerando ainda mais valor para agências que utilizam o Google Ads para gerir anúncios e compartilhar esses dados com seus respectivos clientes.
+
+Note que todos os dados são totalmente protegidos por criptografia e os dashboards só podem ser vistos com quem a conta detentora do dashboard compartilhar o acesso.
+
+Estamos muito felizes de poder integrar nossa plataforma com vocês, esperamos o resultado da nossa aprovação. Obrigado!

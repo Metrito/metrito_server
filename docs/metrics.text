@@ -1,0 +1,63 @@
+metrics.text
+
+> Desempenho
+
+- Resultados
++ Alcance
++ Impressões
+- Veiculação
++ Valor Gasto
++ Cliques (todos)
++ CPC (todos)
++ CTR (todos)
++ frequência <
+
+>>> Custo
+
+- Custo por Resultado
++ Custo por 1.000 pessoas alcançadas
++ CPM (Custo por mil Impressões)
+
+>>> Publicação na página
+
++ Engajamento com a página
++ Curtidas na página
++ Comentários na Publicação
++ Engajamento com a Publicação
+
+>>> Custo: Página e Publicação
+
++ Custo por Engajamento com a página
++ Custo por curtida na página
++ Custo por Engajamento com a Publicação
+
+>>> Cliques
+
++ Cliques no link <
+- Cliques no link únicos
++ CTR (link) <
+- CTR únicos
+
+> Custo: Cliques
+
++ CPC único (link)
+- CPC único (todos)
+
+>>> Eventos padrão
+
++ Visualizações da página de destino
++ Início de finalização de compra
+
++ Custo por visualizações da página de destino
++ Custo por Início de finalização de compra
+
++ Adições ao carrinho
++ Adições a lista de desejos
++ Assinaturas
++ Ativações de aplicativos
++ Cadastros
+- Cliques em como chegar
+- Cliques no anúncio no aplicativo
+- Cliques no número de telefone
++ Compras
++ Custo por compra

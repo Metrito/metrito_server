@@ -1,0 +1,133 @@
+CONSIDERAÇÕES INICIAIS
+
+O presente documento de “POLÍTICA DE PRIVACIDADE” define as práticas e os processos adotados pela empresa de gestão de dados “Metrito” ao gerir as informações de seus usuários, procurando informá-los sobre todos os seus direitos e garantias, as formas de uso, os dados recolhidos, o processamento e o descarte de suas informações pessoais, de modo a tornar transparente a relação da empresa provedora do software com o usuário.
+
+ 
+
+ARMAZENAMENTO DE DADOS
+
+Por ser uma empresa de gestão de dados, à Metrito reserva-se o direito de utilizar as informações pessoais e profissionais do usuário, desde que fornecidas através da ficha cadastral ou para o uso do software. Destaca-se, entretanto, a garantia de confidencialidade desses dados por parte da Metrito, que se compromete a não divulgá-los a terceiros sem prévia autorização do usuário.
+
+Quando o usuário realiza alguma transação com nosso site, como parte do processo de compra e venda, coletamos as informações pessoais que ele nos fornece tais como nome, e-mail e endereço.
+
+Quando o usuário acessa nosso site, também recebemos automaticamente o protocolo de internet de seu computador, endereço de IP, a fim de obter informações que nos ajudam a aprender sobre seu navegador e sistema operacional.
+
+E-mail Marketing será realizado apenas caso o usuário permita. Nestes e-mails, o usuário poderá receber notícia sobre nosso site, novos produtos e outras atualizações.
+
+Ao contratar o software da Metrito, o usuário torna-se ciente da necessidade de coleta de algumas informações pessoais para a execução do software.
+
+ 
+
+USO DE COOKIES E SUA UTILIDADE
+
+Cookies são pequenos arquivos de texto enviados ao computador do usuário, que serão armazenados neste dispositivo. Estes pequenos arquivos servem para reconhecer, acompanhar e armazenar a navegação do usuário na Internet.
+
+Utilizamos cookies para armazenar informação, tais como as preferências pessoais do usuário quando visita o nosso website. Isto poderá incluir um simples pop-up, ou uma ligação em vários serviços que providenciamos, tais como fóruns.
+
+O uso de cookies para acompanhar e armazenar informações possibilitará à Metrito oferecer um serviço mais personalizado, de acordo com as características e interesses de seus usuários, possibilitando, inclusive, a oferta de conteúdo específico, beneficiando sua experiência na Internet.
+
+Em geral, os cookies são utilizados para:
+
+Proporcionar serviços diferenciados, lembrando quem é o usuário e quais são os seus hábitos de navegação, além de acessar as informações de seu cadastro em https://Metrito.com/ (armazenadas em nossos servidores).
+Acompanhar o andamento de promoções. Quando uma promoção organizada pela Metrito utiliza cookies, as informações gravadas neles indicam a pontuação do usuário.
+Medir certos padrões de navegação, mapeando quais áreas do sítio eletrônico da Metrito o usuário visitou e quais são seus hábitos de visita como um todo. Usamos essa informação para verificar a rotina de navegação dos nossos usuários, e assim oferecer conteúdo e/ou serviços cada vez mais personalizados.
+Facilitar e agilizar o preenchimento de formulários. As informações contidas nos cookies de cada usuário podem ser utilizadas para preencher previamente os formulários de coleta de dados existentes na Internet.
+
+Os anunciantes, parceiros e/ou patrocinadores da Metrito poderão utilizar seus próprios cookies, os quais não são cobertos por esta Política. Sugerimos ao usuário consultar as Políticas de Privacidade dessas empresas.
+
+O usuário detém o poder de desligar os seus cookies, nas opções do seu browser, ou efetuando alterações nas ferramentas de programas antivírus. No entanto, isso poderá alterar a forma como interage com o nosso ou com outros websites. Isso poderá afetar ou não permitir que faça logins em programas, sites ou fóruns da nossa e de outras redes.
+
+
+
+
+USO DAS INFORMAÇÕES DO USUÁRIO
+
+As informações coletadas pela Metrito serão utilizadas para personalizar o conteúdo e/ou serviços disponibilizados. Isso inclui serviços de personalização, comunicações interativas, compras on-line e outros tipos de serviços. Possuindo mais informações sobre o usuário, a Metrito poderá fornecer conteúdo e serviços mais relevantes e proporcionar uma melhor experiência on-line.
+
+As informações também poderão ser utilizadas para gerar dados estatísticos gerais com finalidade informativa ou comercial. Informações geográficas, demográficas, psicográficas e de perfil de uso dos usuários poderão ser fornecidas a parceiros, patrocinadores, anunciantes ou outras empresas externas, sem que sejam revelados nomes ou outros dados de navegação.
+
+As informações pessoais individuais não serão comercializadas ou fornecidas a terceiros em nenhuma hipótese, salvo em estrito cumprimento de ordens judiciais ou procedimentos jurídicos similares. Todas as informações fornecidas a parceiros, patrocinadores, anunciantes e demais serão apenas de grupos de usuários (segmentos de mercado).
+
+Todas as informações pessoais relativas a membros, assinantes, clientes ou visitantes que utilizem os serviços da Metrito serão tratadas em concordância com a Lei Geral de Proteção de Dados Pessoais de 14 de agosto de 2018 (Lei nº 13.709).
+
+As informações pessoais recolhidas do usuário podem incluir, por exemplo, seu nome, e-mail, número de telefone e/ou telemóvel, endereço e data de nascimento.
+
+O uso do software pressupõe a aceitação desta Política de Privacidade. À equipe da Metrito reserva-se o direito de alterar este acordo. Deste modo, recomendamos que o usuário consulte a nossa Política de Privacidade com regularidade de forma a estar sempre atualizado.
+
+
+
+
+COMPARTILHAMENTO DE INFORMAÇÕES
+
+A Metrito não tem como prática a divulgação de informações que possam identificar seus usuários, salvo quando autorizado por estes ou em circunstâncias previstas no presente acordo. Em alguns casos, essa identificação será necessária, caso o usuário adquira um determinado produto ou serviço que necessite de suas informações pessoais. A identificação também pode ser pedida para que uma determinada transação comercial possa ser efetivada. A revelação dos dados do usuário poderá ainda acontecer devido a exigências legais. A Metrito pode revelar as informações pessoais do usuário em algumas circunstâncias, listadas nos casos a seguir:
+
+Parceiros de negócios e patrocinadores: A Metrito pode divulgar as informações pessoais do usuário a alguns parceiros, patrocinadores, anunciantes e demais. Porém, nesses casos, o usuário será consultado antes mesmo de a coleta ou transferência de dados ser feita. Os detalhes do uso compartilhado podem ser encontrados nos contratos de uso específicos e também nas regras das promoções. Alguns ou todos os dados coletados durante uma promoção da Metrito podem ser compartilhados com um patrocinador. Se forem compartilhados dados que possam identificar o usuário, ele será informado antes da coleta ou transferência de dados.
+Dados de terceiros e dados agregados: Sob acordos de confidencialidade e demais instrumento contratuais, a Metrito pode comparar informações do usuário com dados de terceiros. Além disso, a Metrito pode divulgar estatísticas agregadas para grupos de usuários com o objetivo de descrever seus serviços para prováveis parceiros, patrocinadores e anunciantes.
+Outros: A Metrito também pode revelar informações sobre o usuário em casos especiais em que se tenha fundada razão para acreditar que elas são necessárias para identificar, entrar em contato ou agir legalmente contra alguém que possa estar causando danos ou interferindo (intencional ou não intencionalmente) nos direitos ou na propriedade da Metrito, de outros usuários da Metrito ou de qualquer pessoa que seja prejudicada por tais atividades. Além disso, a Metrito pode revelar informações sobre o usuário nos casos exigidos por lei ou por autoridade judicial.
+
+Quando o usuário fornece informações pessoais como nome, telefone e endereço, para completar uma transação, verificar seu cartão de crédito, fazer um pedido, providenciar uma entrega ou retornar uma compra, obtemos seu consentimento para armazenar e/ou utilizar tais informações. Após a realização de ações entendemos que o usuário está de acordo com a coleta de dados para serem utilizados pela nossa empresa.
+
+Se solicitarmos ao usuário suas informações pessoais por uma razão secundária, como marketing, pediremos diretamente por seu consentimento, ou daremos a ele a oportunidade de se manifestar.
+
+Se o usuário mudar de ideia após nos fornecer seus dados, ele poderá retirar o seu consentimento. Para que possamos entrar em contato, para a coleção de dados contínua, uso ou divulgação de suas informações, a qualquer momento, o usuário deve entrar em contato conosco pelo e-mail suporte@Metrito.com.
+
+FACEBOOK ADS
+
+O Metrito utiliza o Serviço de API do Facebook para gerar relatórios e dashboards de contas de anúncio. Por isso, ao usar o Metrito você concorda em se comprometer com o Termos de Serviço do Facebook e também a Política de Privacidade do Facebook. O Metrito irá coletar os dados das suas contas de anúncio do Facebook baseado nas métricas que você adicionar em seus relatórios e dashboards. Esses dados pertencem a você e não serão compartilhados com terceiros. Se você quiser revogar a permissão do Metrito em suas contas Facebook basta acessar as Configurações de Segurança do Facebook. Se você tiver quaisquer dúvidas ou reclamações basta entrar em contato por email em suporte@Metrito.com
+
+OS ANÚNCIOS
+
+Tal como outros websites, coletamos e utilizamos informação contida nos anúncios. A informação contida nos anúncios inclui o endereço IP (Internet Protocol) do usuário, o seu ISP (Internet Service Provider), o browser utilizado ao visitar o nosso website (como o Internet Explorer ou o Firefox), o tempo de sua visita e as páginas visitadas dentro do site.
+
+
+
+
+PRECAUÇÕES DE SEGURANÇA ESTABELECIDAS PARA PROTEÇÃO DO USUÁRIO EM CASO DE PERDA, MÁ UTILIZAÇÃO OU ALTERAÇÃO DE INFORMAÇÕES
+
+As informações sobre a conta da Metrito são protegidas por senha, para que somente o usuário tenha acesso a suas informações pessoais.
+
+A senha é secreta e recomendamos ao usuário que não seja revelada a ninguém. A Metrito não irá solicitar, em nenhuma hipótese, seja por e-mail ou telefone, a senha pessoal do usuário. O usuário deve se lembrar de desconectar-se de sua conta e de fechar a janela do seu navegador quando concluir sua navegação na Internet. Isso dificulta outras pessoas a terem acesso a suas informações pessoais e correspondências, caso o usuário compartilhe um computador com alguém ou esteja usando um computador em local público, como uma biblioteca ou local de acesso público à Internet.
+
+Nenhuma transmissão de dados na Internet é 100% segura. Sendo assim, embora a Metrito sempre faça o possível para proteger suas informações pessoais, não é possível garantir a segurança de todas as informações que o usuário venha a nos fornecer. É uma decisão pessoal a utilização do serviço nessas condições.
+
+
+
+
+LIGAÇÕES A SITES DE TERCEIROS
+
+A Metrito possui ligações para outros sites, os quais podem conter informações e ferramentas úteis para os nossos visitantes. No entanto, nossa Política de Privacidade não é aplicada a sites de terceiros. Dessa forma, caso o usuário visite outro site a partir do nosso, deverá ler a Política de Privacidade do mesmo. Não nos responsabilizamos pela Política de Privacidade ou conteúdo presente nesses sites.
+
+Em geral, os fornecedores terceirizados utilizados por nós irão apenas coletar, usar e divulgar informações na medida do necessário para permitir que eles realizem os serviços que eles nos fornecem.
+
+Entretanto, certos fornecedores de serviços terceirizados, tais como gateways de pagamento e outros processadores de transação de pagamento, têm suas próprias Políticas de Privacidade com respeito à informação que somos obrigados a fornecer de transações relacionadas com compras.
+
+Para esses fornecedores, recomendamos que o usuário leia suas políticas de privacidade para que possa entender a maneira pela qual suas informações pessoais serão usadas por esses fornecedores.
+
+Em particular, é importante lembrar que certos fornecedores podem ser localizados ou possuírem instalações que são localizadas em jurisdições diferentes da nossa ou daquela em que o usuário se encontra. Assim, se o usuário quiser continuar com uma transação que envolve os serviços de um fornecedor de serviço terceirizado, então suas informações podem tornar-se sujeitas às leis da(s) jurisdição(ões) nas quais o fornecedor de serviço ou suas instalações estão localizados.
+
+Uma vez que o usuário deixe o nosso site, ou seja, redirecionado para um aplicativo ou site de terceiros, ele não será mais regido por essa Política de Privacidade ou pelos Termos de Uso da Metrito.
+
+
+
+
+ALTERAÇÕES NA POLÍTICA DE PRIVACIDADE
+
+Nos reservamos o direito de modificar essa Política de Privacidade a qualquer momento, portanto recomendamos ao usuário que a revise com frequência. Alterações e esclarecimentos surtirão efeito imediatamente após sua publicação no site. Se fizermos alterações de materiais para essa política, iremos notificar o usuário para que ele tenha ciência sobre quais informações coletamos, como as usamos, e sob que circunstâncias as utilizamos e/ou divulgamos.
+
+Se nosso site for adquirido ou fundido com outra empresa, as informações do usuário podem ser transferidas para os novos proprietários para que seja mantido o fornecimento de serviços ao usuário.
+
+
+
+
+CONSIDERAÇÕES FINAIS
+
+Para proteger as informações pessoais do usuário, tomamos precauções razoáveis e seguimos as melhores práticas da indústria para nos certificar que elas não serão perdidas inadequadamente, usurpadas, acessadas, divulgadas, alteradas ou destruídas.
+
+Em última análise o usuário é o responsável pela manutenção de sua privacidade e pelo sigilo de suas senhas e/ou informações pessoais.
+
+Sendo assim, recomendamos ao usuário:
+
+Informar-se, sempre buscando, ao navegar pela Internet, a política/declaração de privacidade do site que está acessando.
+Utilizar senhas complexas, formadas por combinações longas de diferentes tipos de caracteres, com combinações pouco usuais no teclado, uma vez que senhas simples são facilmente quebradas.
+Somente fornecer sua senha ao realizar compras pessoalmente, nunca a fornecendo on-line. Caso isso ocorra, o usuário deve modificá-la imediatamente.
+Evitar incluir informações que permitam às pessoas encontrá-lo, tais como número de telefone ou endereço para correspondência. Ressalta-se que anúncios pessoais, fóruns e salas de bate-papo são de domínio público; e as informações disponibilizadas nesses meios estarão disponíveis a qualquer pessoa com acesso a eles.
