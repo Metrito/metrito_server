@@ -17,4 +17,6 @@
 
 npm-debug.log*
 
+logs
+
 temp/uploads/*
