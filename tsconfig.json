@@ -13,6 +13,9 @@
 
       "@application/*": ["./src/application/*"],
       "@application": ["./src/application"],
+
+      "@factories/*": ["./src/factories/*"],
+      "@factories": ["./src/factories"]
     }
   },
   "exclude": ["node_modules", "dist"]

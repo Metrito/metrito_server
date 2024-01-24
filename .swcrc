@@ -19,10 +19,15 @@
     },
     "externalHelpers": false,
     "keepClassNames": false,
-    "baseUrl": ".",
     "paths": {
-      "@server/*": ["src/server/*"],
-      "@server": ["src/server"]
+      "@server/*": ["./src/server/*"],
+      "@server": ["./src/server"],
+
+      "@application/*": ["./src/application/*"],
+      "@application": ["./src/application"],
+
+      "@factories/*": ["./src/factories/*"],
+      "@factories": ["./src/factories"]
     }
   },
   "minify": true
