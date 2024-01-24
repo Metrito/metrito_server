@@ -5,6 +5,8 @@ import { ZodError, z } from 'zod';
 const envVariablesSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']),
 
+  DATABASE_URL: z.string(),
+
   PORT: z.coerce.number(),
 });
 
