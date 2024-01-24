@@ -1,11 +1,12 @@
 import express from 'express';
 
+import { routesLogger } from '@infra/logger/routesLogger';
+
 import { routes } from './routes';
-import { logger } from './settings/logger';
 
 const app = express();
 
-app.use(logger());
+app.use(routesLogger());
 
 app.use(routes);
 

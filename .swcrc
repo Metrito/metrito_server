@@ -19,6 +19,7 @@
     },
     "externalHelpers": false,
     "keepClassNames": false,
+    "baseUrl": ".",
     "paths": {
       "@server/*": ["./src/server/*"],
       "@server": ["./src/server"],
@@ -27,7 +28,10 @@
       "@application": ["./src/application"],
 
       "@factories/*": ["./src/factories/*"],
-      "@factories": ["./src/factories"]
+      "@factories": ["./src/factories"],
+
+      "@infra/*": ["./src/infra/*"],
+      "@infra": ["./src/infra"]
     }
   },
   "minify": true

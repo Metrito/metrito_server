@@ -1,16 +1,26 @@
+/**
+ *
+ * routesLogger são os logs sobre erros capturados nas requisições respondidas
+ * com status codes de erros.
+ *
+ * São automaticamente salvos em arquivo de logs ou no banco de dados (dependendo
+ * do environment)
+ *
+ */
+
 import 'winston-mongodb';
 
 import expressWinston from 'express-winston';
 import { transports, format } from 'winston';
 
-const ERROR_LOGS_FILENAME = 'logs/errors.log';
-const ERROR_LOGS_COLLECTION = 'logs_errors';
+const ERROR_LOGS_FILENAME = 'logs/errors_requests.log';
+const ERROR_LOGS_COLLECTION = 'logs_errors_requests';
 
 /**
  * Os transports são onde os logs serão salvos ou exibidos.
  *
  * Em modo de desenvolvimento, os logs de erros ficam salvos no arquivo
- * logs/errors.log.
+ * logs/errors_requests.log.
  *
  * Já em produção, os logs são salvos no Banco de Dados.
  */
@@ -33,7 +43,7 @@ function getTransports() {
   ];
 }
 
-export const logger = () =>
+export const routesLogger = () =>
   expressWinston.logger({
     transports: getTransports(),
     format: format.combine(

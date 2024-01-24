@@ -15,7 +15,10 @@
       "@application": ["./src/application"],
 
       "@factories/*": ["./src/factories/*"],
-      "@factories": ["./src/factories"]
+      "@factories": ["./src/factories"],
+
+      "@infra/*": ["./src/infra/*"],
+      "@infra": ["./src/infra"]
     }
   },
   "exclude": ["node_modules", "dist"]
