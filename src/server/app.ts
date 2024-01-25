@@ -1,12 +1,11 @@
 import express from 'express';
 
-import { httpLogger } from '@infra/logger';
-
 import { routes } from './routes';
+import { configureSettings } from './settings';
 
 const app = express();
 
-app.use(httpLogger);
+configureSettings(app);
 
 app.use(routes);
 
