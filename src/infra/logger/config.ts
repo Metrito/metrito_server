@@ -4,108 +4,105 @@ const LOGS_DIR = 'logs';
 
 const loggerConfig = {
   /**
-   * True para exibir logs de debug também.
+   * Set to true to display debug logs.
    *
-   * Não é uma boa prática deixar logs de debugs serem exibidos em produção.
+   * It is not a good practice to display debug logs in production.
    */
   SHOW_DEBUG_LEVEL: process.env.NODE_ENV !== 'production',
 
   /**
-   * True para armazenar os logs de atividades em logs/activity.
+   * Set to true to store activity logs in the 'logs/activities' directory.
    */
   STORE_ACTIVITY_LOGS: true,
 
   /**
-   * True para armazenar os logs de erros em logs/errors.
+   * Set to true to store error logs in the 'logs/errors' directory.
    */
   STORE_ERROR_LOGS: true,
 
   /**
-   * True para armazenar os logs de erros de requisições http em logs/http_errors.
+   * Set to true to store HTTP request error logs in the 'logs/http_errors'
+   * directory.
    */
   STORE_HTTP_ERROR_LOGS: true,
 
   /**
-   * True para armazenar os logs de atividades no banco de dados.
+   * Set to true to store activity logs in the database.
    */
   DATABASE_STORE_ACTIVITY_LOGS: true,
 
   /**
-   * True para armazenar os logs de erros no banco de dados.
+   * Set to true to store error logs in the database.
    */
   DATABASE_STORE_ERROR_LOGS: true,
 
   /**
-   * True para armazenar os logs de erros de requisições http no banco de dados.
+   * Set to true to store HTTP request error logs in the database.
    */
   DATABASE_STORE_HTTP_ERROR_LOGS: true,
 
   /**
-   * True para armazenar nos arquivos de logs, além de requisições http de
-   * status 500, também 400.
+   * Set to true to store 400 errors in the log files.
    */
   INCLUDES_400_ERRORS: true,
 
   /**
-   * True para armazenar no banco de dados, além de requisições http de
-   * status 500, também 400.
+   * Set to true to store 400 errors in the database.
    */
   DATABASE_INCLUDES_400_ERRORS: true,
 
   /**
-   * Diretório que ficarão salvo os logs localmente.
+   * Directory where logs will be saved locally.
    */
   LOGS_DIR,
 
   /**
-   * Diretório que ficarão salvo os logs de atividades.
+   * Directory where activity logs will be saved.
    */
   ACTIVITY_LOGS_DIR: path.resolve(LOGS_DIR, 'activities'),
 
   /**
-   * Diretório que ficarão salvo os logs de erros.
+   * Directory where error logs will be saved.
    */
   ERROR_LOGS_DIR: path.resolve(LOGS_DIR, 'errors'),
 
   /**
-   * URL do banco de dados que será armazenado as logs.
-   */
-  DATABASE_URL: process.env.DATABASE_URL,
-
-  /**
-   * Diretório que ficarão salvo os logs de erros causados em requisições http.
+   * Directory where HTTP request error logs will be saved.
    */
   HTTP_ERROR_LOGS_DIR: path.resolve(LOGS_DIR, 'http_errors'),
 
   /**
-   * Collection do banco de dados que ficarão salvo os logs de atividades.
+   * URL of the database where logs will be stored.
+   */
+  DATABASE_URL: process.env.DATABASE_URL,
+
+  /**
+   * Collection in the database where activity logs will be stored.
    */
   ACTIVITY_LOGS_COLLECTION: 'logs_activities',
 
   /**
-   * Collection do banco de dados que ficarão salvo os logs de erros.
+   * Collection in the database where error logs will be stored.
    */
   ERROR_LOGS_COLLECTION: 'logs_errors',
 
   /**
-   * Collection do banco de dados que ficarão salvo os logs de erros causados
-   * em requisições http.
+   * Collection in the database where HTTP request error logs will be stored.
    */
   HTTP_ERROR_LOGS_COLLECTION: 'logs_http_errors',
 
   /**
-   * Tamanho máximo por arquivo de logs.
+   * Maximum size per log file.
    */
   MAX_SIZE_PER_FILE: 250 * 1024 * 1024, // 250mb
 
   /**
-   * Extensão dos arquivos de logs.
+   * Log file extension.
    */
   LOGS_FILE_EXTENSION: '.log',
 
   /**
-   * Se true, os arquivos de logs sempre estarão zipados para uma compressão
-   * no tamanho.
+   * If true, log files will always be zipped for compression.
    */
   LOGS_FILE_ZIPPED: false,
 };

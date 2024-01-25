@@ -8,19 +8,22 @@ import utils from '@shared/utils';
 
 import loggerConfig from '../config';
 
+/**
+ * Format for logging information to files.
+ */
 const fileFormat = format.combine(
   /**
-   * Exibe o timestamp (data e tempo) que o log foi adicionado.
+   * Display the timestamp (date and time) when the log was added.
    */
   format.timestamp(),
 
   /**
-   * Pega o valor do campo _logs_context de dentro do meta e cria um novo
-   * campo chamado context fora do meta. Por fim, remove o campo _logs_context
-   * do meta.
-   * Injeta o caminho em que o log foi acionado.
-   * Remove cores ANSI da mensagem.
-   * Corrige o UTC do timestamp.
+   * Extract the value of the '_logs_context' field from the meta and create a new
+   * field called 'context' outside of meta. Finally, remove the '_logs_context'
+   * field from meta.
+   * Inject the path where the log was triggered.
+   * Remove ANSI colors from the message.
+   * Correct the UTC of the timestamp.
    */
   format((info) => {
     if ('_logs_context' in info) {
@@ -46,21 +49,21 @@ const fileFormat = format.combine(
   })(),
 
   /**
-   * Injeta o campo metadata.
-   * Metadata é um campo providenciado nas funções de logs.
-   * Exemplo: `logger.info('Hello', { thisIsMetadata: true })`
+   * Inject the metadata field.
+   * Metadata is a field provided in log functions.
+   * Example: `logger.info('Hello', { thisIsMetadata: true })`
    */
   format.metadata({
     fillExcept: ['message', 'level', 'timestamp', 'context', 'path'],
   }),
 
   /**
-   * Formata o log como JSON.
+   * Format the log as JSON.
    */
   format.json(),
 
   /**
-   * Deixa o JSON legível.
+   * Make the JSON readable.
    */
   format.prettyPrint(),
 );

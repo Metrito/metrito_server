@@ -9,19 +9,22 @@ import loggerConfig from '../config';
 
 import type { MongoDBTransportInstance } from 'winston-mongodb';
 
+/**
+ * Format for logging to the database.
+ */
 const databaseFormat = format.combine(
   /**
-   * Exibe o timestamp (data e tempo) que o log foi adicionado.
+   * Display the timestamp (date and time) when the log was added.
    */
   format.timestamp(),
 
   /**
-   * Pega o valor do campo _logs_context de dentro do meta e cria um novo
-   * campo chamado context fora do meta. Por fim, remove o campo _logs_context
-   * do meta.
-   * Injeta o caminho em que o log foi acionado.
-   * Remove cores ANSI da mensagem.
-   * Corrige o UTC do timestamp.
+   * Extract the value of the '_logs_context' field from within the metadata and
+   * create a new field called 'context' outside of the metadata. Finally, remove
+   * the '_logs_context' field from the metadata.
+   * Inject the path where the log was triggered.
+   * Remove ANSI colors from the message.
+   * Correct the UTC of the timestamp.
    */
   format((info) => {
     if ('_logs_context' in info) {
@@ -47,21 +50,21 @@ const databaseFormat = format.combine(
   })(),
 
   /**
-   * Injeta o campo metadata.
-   * Metadata é um campo providenciado nas funções de logs.
-   * Exemplo: `logger.info('Hello', { thisIsMetadata: true })`
+   * Inject the metadata field.
+   * Metadata is a field provided in the log functions.
+   * Example: `logger.info('Hello', { thisIsMetadata: true })`
    */
   format.metadata({
     fillExcept: ['message', 'level', 'timestamp', 'context', 'path'],
   }),
 
   /**
-   * Formata o log como JSON.
+   * Format the log as JSON.
    */
   format.json(),
 
   /**
-   * Deixa o JSON legível.
+   * Make the JSON readable.
    */
   format.prettyPrint(),
 );

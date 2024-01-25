@@ -6,7 +6,7 @@ import objectUtils from '@shared/objectUtils';
 import utils from '@shared/utils';
 
 /**
- * Hack para pegar a tipagem de "info" do callback da função format.printf
+ * Hack to capture the "info" typing from the format.printf callback function.
  */
 type PrintfFunction = typeof format.printf;
 type PrintfCallback = Parameters<PrintfFunction>[0];
@@ -14,35 +14,35 @@ type PrintfCallbackParams = Parameters<PrintfCallback>;
 type TransformableInfo = PrintfCallbackParams[0];
 
 /**
- * Template do log para console
+ * Console log template.
  *
- * Tags existentes:
- * {{timestamp}} - Horário do log
- * {{path}} - Caminho do arquivo que executou o log
- * {{context}} - Contexto do log
- * {{level}} - Nível do log
- * {{message}} - Mensagem
+ * Available tags:
+ * {{timestamp}} - Log timestamp
+ * {{path}} - File path where the log was executed
+ * {{context}} - Log context
+ * {{level}} - Log level
+ * {{message}} - Log message
  *
- * Todos os colchetes, dois pontos ou barra que possuem $ atrás serão colorizados de cinza
+ * Any brackets, colons, or slashes with a $ at the end will be grayed out.
  */
 const LOG_TEMPLATE =
   '$[{{timestamp}}$] $[{{context}} $/ {{level}}$]$: {{message}} {{path}}';
 
 /**
- * Se deve exibir [YYYY-MM-DD HH:mm:ss] nos logs.
+ * Flag to display [YYYY-MM-DD HH:mm:ss] in logs.
  *
- * O timestamp já é exibido pelo serviço de deploy.
+ * The timestamp is already displayed by the deploy service.
  */
 const SHOW_TIMESTAMP = process.env.NODE_ENV !== 'production';
 
 /**
- * Se deve exibir o diretório do arquivo responsável pelo log.
+ * Flag to display the file directory responsible for the log.
  */
 const SHOW_PATH = process.env.NODE_ENV !== 'production';
 
 /**
- * Substitui a tag timestamp do template. Caso a flag SHOW_TIMESTAMP
- * esteja false, o timestamp é exibido como vazio.
+ * Replace the timestamp tag in the template. If the SHOW_TIMESTAMP flag
+ * is false, the timestamp is displayed as empty.
  */
 function replaceTimestamp(template: string) {
   if (SHOW_TIMESTAMP) {
@@ -57,14 +57,14 @@ function replaceTimestamp(template: string) {
 }
 
 /**
- * Substitui a tag nível do template.
+ * Replace the level tag in the template.
  */
 function replaceLevel(template: string, info: TransformableInfo) {
   return template.replace('{{level}}', chalk.bold(info.level));
 }
 
 /**
- * Substitui a tag path do template.
+ * Replace the path tag in the template.
  */
 function replacePath(template: string) {
   const path = utils.currentPath();
@@ -79,10 +79,10 @@ function replacePath(template: string) {
 }
 
 /**
- * Substitui a tag label do template.
+ * Replace the context tag in the template.
  *
- * Campos do metadata que começam com "_logs_" são campos injetados pelo código
- * para uma organização dos logs. Por isso não são exibidos nos logs finais.
+ * Fields in the metadata that start with "_logs_" are injected by the code
+ * for log organization and are not displayed in the final logs.
  */
 function replaceContext(template: string, info: TransformableInfo) {
   const context = info.metadata?._logs_context;
@@ -97,32 +97,32 @@ function replaceContext(template: string, info: TransformableInfo) {
 }
 
 /**
- * Substitui a tag mensagem do template.
+ * Replace the message tag in the template.
  */
 function replaceMessage(template: string, info: TransformableInfo) {
   /**
-   * É feito uma limpeza complexa para exibir a mensagem final.
+   * A complex cleanup is performed to display the final message.
    *
-   * Além do campo "message", também é possível providenciar várias outras
-   * mensagens e até um metadata.
+   * In addition to the "message" field, it is also possible to provide various other
+   * messages and even metadata.
    *
-   * Quando é enviado um log simples `logger.info('Hello World')`, 'Hello World'
-   * é a propriedade simples `info.message`.
+   * When sending a simple log `logger.info('Hello World')`, 'Hello World'
+   * is the simple `info.message` property.
    *
-   * Quando é enviado um log com um metadado `logger.info('Hello', { ok: true })`,
-   * 'Hello' é a propriedade simples `info.message` e { ok: true } é a propriedade
-   * info.metadata.
+   * When sending a log with metadata `logger.info('Hello', { ok: true })`,
+   * 'Hello' is the simple `info.message` property and { ok: true } is the
+   * info.metadata property.
    *
-   * Quando é enviado uma sequência de mensagens `logger.info('Hello', 'World')`,
-   * 'Hello' é a propriedade simples `info.message` e 'World' é a propriedade
-   * info[Symbol.for('splat')]. Mas nesses casos, o restantes da mensagens serão
-   * exibidos como um array de strings.
+   * When sending a sequence of messages `logger.info('Hello', 'World')`,
+   * 'Hello' is the simple `info.message` property and 'World' is the
+   * info[Symbol.for('splat')] property. In these cases, the remaining messages
+   * will be displayed as an array of strings.
    *
-   * Também há casos de enviar um objeto em algum parâmetro aleatório, ele acabar
-   * vindo de dentro do campo Symbol('splat'), e etc.
+   * There are also cases of sending an object in some random parameter, it ending
+   * up coming from within the Symbol('splat') field, and so on.
    *
-   * A complexidade abaixo faz uma limpeza nos campos message, metadata e Symbol('splat'),
-   * para exibir fielmente a mensagem final.
+   * The complexity below cleans up the message, metadata, and Symbol('splat') fields,
+   * to faithfully display the final message.
    */
 
   let finalMessage: string = '';
@@ -145,7 +145,7 @@ function replaceMessage(template: string, info: TransformableInfo) {
     const hasMetadata = !!info.metadata;
 
     /**
-     * O splat também adiciona o metadata em sua composição.
+     * The splat also adds metadata to its composition.
      */
     if (hasMetadata) {
       splat.splice(0, 1);
@@ -168,29 +168,26 @@ function replaceMessage(template: string, info: TransformableInfo) {
 }
 
 /**
- * É possível que sobre alguns valores ainda não substituídos, ou até mesmo
- * colchetes com nenhum valor internamente.
+ * Clean up and remove any remaining values or brackets with no internal values.
  *
- * Essa função limpará e removerá esses resquícios.
+ * Examples:
+ * - Before: [] [{{label}} / ERROR]: Wrong value
+ * - After: [ERROR]: Wrong value
  *
- * Exemplos:
- * - Antes: [] [{{label}} / ERROR]: Wrong value
- * - Depois: [ERROR]: Wrong value
- *
- * - Antes: [2024-01-24 13:25:27] [METRITO / INFO]: Starting
- * - Depois: [2024-01-24 13:25:27] [METRITO / INFO]: Starting (nada muda, pois nenhum valor está faltando)
+ * - Before: [2024-01-24 13:25:27] [METRITO / INFO]: Starting
+ * - After: [2024-01-24 13:25:27] [METRITO / INFO]: Starting (nothing changes, as no value is missing)
  */
 function cleanMessage(message: string) {
   return message
     .replace(/{{.+?}}/g, '') // remove tags: '{{something}}' -> ''
-    .replace(/\$\[\$\]/g, '') // remove colchetes vázios: '[]' -> ''
-    .replace(/undefined/g, '') // remove valores undefined
-    .replace(/\[ \$\/ /g, '[') // remove a barra desnecessária: '[ / INFO]' -> '[INFO]'
+    .replace(/\$\[\$\]/g, '') // remove empty brackets: '[]' -> ''
+    .replace(/undefined/g, '') // remove undefined values
+    .replace(/\[ \$\/ /g, '[') // remove unnecessary slash: '[ / INFO]' -> '[INFO]'
     .trim();
 }
 
 /**
- * Aplica uma cor cinza para caracteres especiais do template.
+ * Apply gray color to special characters in the template.
  */
 function applyGrayForCharacters(message: string) {
   return message
@@ -202,8 +199,8 @@ function applyGrayForCharacters(message: string) {
 
 const consoleFormat = format.combine(
   /**
-   * Transforma o nível em upper case. No console ficará:
-   * ao invés de "info", ficará "INFO".
+   * Convert the level to uppercase. In the console it will be:
+   * instead of "info", it will be "INFO".
    * etc...
    */
   format((info) => {
@@ -213,24 +210,24 @@ const consoleFormat = format.combine(
   })(),
 
   /**
-   * Injeta o campo metadata no campo info de printf.
-   * Metadata é um campo providenciado nas funções de logs.
-   * Exemplo: `logger.info('Hello', { thisIsMetadata: true })`
+   * Inject the metadata field into the printf info field.
+   * Metadata is a field provided in the log functions.
+   * Example: `logger.info('Hello', { thisIsMetadata: true })`
    */
   format.metadata(),
 
   /**
-   * Aplica colorização para cada nível
+   * Apply colorization for each level.
    */
   format.colorize(),
 
   /**
-   * Formata o log final no formato do LOG_TEMPLATE.
+   * Format the final log in the LOG_TEMPLATE format.
    */
   format.printf((info) => {
     /**
-     * Recria uma cópia do template para começar a substituir as tags {{}} por
-     * valores reais.
+     * Recreate a copy of the template to start replacing the {{}} tags with
+     * actual values.
      */
     let template = LOG_TEMPLATE;
 
@@ -243,7 +240,7 @@ const consoleFormat = format.combine(
     template = replaceContext(template, info);
 
     /**
-     * Caso o metadata esteja vazio, deleta-o para não exibir nos logs.
+     * If the metadata is empty, delete it to avoid displaying it in the logs.
      */
     if (objectUtils.isEmpty(info.metadata)) {
       delete info.metadata;

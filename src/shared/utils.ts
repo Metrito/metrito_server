@@ -1,35 +1,35 @@
 /**
- * Arquivo com diversas funções utilitárias.
+ * File containing various utility functions.
  */
 
 import path from 'node:path';
 
 /**
- * Hack para gerar um número aleatório entre min e max.
+ * Hack to generate a random number between min and max.
  */
-const random = (min = 0, max = 1) => Math.random() * (max - min) + min;
+const random = (min = 0, max = 1): number => Math.random() * (max - min) + min;
 
 /**
- * Faça o código por algum tempo definido.
+ * Pause execution for a defined period.
  */
-const wait = (ms = random(200, 1500)) =>
+const wait = (ms = random(200, 1500)): Promise<void> =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
- * Remove os caracteres de cor de uma string
+ * Remove color characters from a string.
  */
-const removeANSIColors = (input: string) =>
+const removeANSIColors = (input: string): string =>
   input.replace(
     /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g,
     '',
   );
 
 /**
- * Retorna qual o caminho do arquivo atual.
+ * Returns the current file path.
  *
- * É possível que ainda não tenha sido registrado.
+ * It may not have been registered yet.
  */
-function currentPath() {
+function currentPath(): string | undefined {
   const allPathsRegistered = require.main?.children;
 
   if (!allPathsRegistered || allPathsRegistered.length === 0) {

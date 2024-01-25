@@ -1,26 +1,26 @@
 /**
- * Arquivo com algumas funções utilitárias para manipulação ou debug de objetos
+ * File containing utility functions for object manipulation or debugging
  */
 
 import util from 'util';
 
 /**
- * Verifica se um objeto está vazio (não possui nenhuma chave e valor).
+ * Checks if an object is empty (has no keys and values).
  */
-const isEmpty = (object: object | null | undefined) =>
+const isEmpty = (object: object | null | undefined): boolean =>
   object ? Object.keys(object).length === 0 : true;
 
 /**
- * Inspecione o objeto passado como parâmetro, usando o util.inspect
+ * Inspects the object passed as a parameter using util.inspect.
  */
-const inspect = (object: object, depth = 5) =>
+const inspect = (object: object, depth = 5): string =>
   util.inspect(object, false, depth, true);
 
 /**
- * Converta um objeto em JSON utilizando parâmetros padrões (replacer como null
- * e space como 2)
+ * Converts an object to JSON using default parameters (replacer as null
+ * and space as 2).
  */
-const json = (object: object) => JSON.stringify(object, null, 2);
+const json = (object: object): string => JSON.stringify(object, null, 2);
 
 export default {
   isEmpty,
