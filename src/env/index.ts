@@ -4,17 +4,21 @@ import { ZodError, z } from 'zod';
 
 import { mainLogger } from '@infra/logger';
 
+import { logsEnvSchema } from './logsEnv';
+
 const logger = mainLogger.context('ENV', chalk.rgb(138, 11, 49));
 
-const envVariablesSchema = z.object({
-  NODE_ENV: z.enum(['development', 'production', 'test']),
+const envVariablesSchema = z
+  .object({
+    NODE_ENV: z.enum(['development', 'production', 'test']),
 
-  DATABASE_URL: z.string(),
+    DATABASE_URL: z.string(),
 
-  PORT: z.coerce.number(),
+    PORT: z.coerce.number(),
 
-  ORIGINS: z.string().transform((origins) => origins.split(';')),
-});
+    ORIGINS: z.string().transform((origins) => origins.split(';')),
+  })
+  .and(logsEnvSchema);
 
 try {
   const parsed = envVariablesSchema.parse(process.env);

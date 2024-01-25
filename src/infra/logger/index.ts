@@ -32,7 +32,7 @@ import { fileTransports } from './transports/fileTransports';
  */
 function buildLogger() {
   const loggerMainInstance = createLogger({
-    level: loggerConfig.SHOW_DEBUG_LEVEL ? 'debug' : 'info',
+    level: loggerConfig.SHOW_DEBUG_LOGS ? 'debug' : 'info',
   });
 
   addTransports(loggerMainInstance, consoleTransports);

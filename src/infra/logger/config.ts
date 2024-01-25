@@ -1,6 +1,44 @@
 import path from 'node:path';
 
+import { LogsEnvSchema } from '../../env/logsEnv';
+
 const LOGS_DIR = 'logs';
+
+type ValueByEnvironment =
+  | {
+      production: boolean;
+      development: boolean;
+    }
+  | boolean;
+
+/**
+ * Helper function to retrieve the value of an environment variable or use a
+ * default value based on the environment.
+ */
+function getValue(
+  key: keyof LogsEnvSchema,
+  valueByEnvironment: ValueByEnvironment,
+) {
+  let production, development;
+
+  if (typeof valueByEnvironment === 'boolean') {
+    production = valueByEnvironment;
+    development = valueByEnvironment;
+  } else {
+    production = valueByEnvironment.production;
+    development = valueByEnvironment.development;
+  }
+
+  const environment = process.env.NODE_ENV;
+
+  const envValue = process.env[key] ?? 'auto';
+
+  if (envValue === 'auto') {
+    return environment === 'production' ? production : development;
+  }
+
+  return envValue;
+}
 
 const loggerConfig = {
   /**
@@ -8,38 +46,53 @@ const loggerConfig = {
    *
    * It is not a good practice to display debug logs in production.
    */
-  SHOW_DEBUG_LEVEL: process.env.NODE_ENV !== 'production',
+  SHOW_DEBUG_LOGS: getValue('SHOW_DEBUG_LOGS', {
+    production: false,
+    development: true,
+  }),
 
   /**
    * Set to true to store activity logs in the 'logs/activities' directory.
    */
-  STORE_ACTIVITY_LOGS: true,
+  STORE_ACTIVITY_LOGS: getValue('STORE_ACTIVITY_LOGS', {
+    production: true,
+    development: false,
+  }),
 
   /**
    * Set to true to store error logs in the 'logs/errors' directory.
    */
-  STORE_ERROR_LOGS: true,
+  STORE_ERROR_LOGS: getValue('STORE_ERROR_LOGS', true),
 
   /**
    * Set to true to store HTTP request error logs in the 'logs/http_errors'
    * directory.
    */
-  STORE_HTTP_ERROR_LOGS: true,
+  STORE_HTTP_ERROR_LOGS: getValue('STORE_HTTP_ERROR_LOGS', true),
 
   /**
    * Set to true to store activity logs in the database.
    */
-  DATABASE_STORE_ACTIVITY_LOGS: true,
+  DATABASE_STORE_ACTIVITY_LOGS: getValue('DATABASE_STORE_ACTIVITY_LOGS', {
+    production: true,
+    development: false,
+  }),
 
   /**
    * Set to true to store error logs in the database.
    */
-  DATABASE_STORE_ERROR_LOGS: true,
+  DATABASE_STORE_ERROR_LOGS: getValue('DATABASE_STORE_ERROR_LOGS', {
+    production: true,
+    development: false,
+  }),
 
   /**
    * Set to true to store HTTP request error logs in the database.
    */
-  DATABASE_STORE_HTTP_ERROR_LOGS: true,
+  DATABASE_STORE_HTTP_ERROR_LOGS: getValue('DATABASE_STORE_HTTP_ERROR_LOGS', {
+    production: true,
+    development: false,
+  }),
 
   /**
    * Set to true to store 400 errors in the log files.

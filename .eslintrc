@@ -8,6 +8,8 @@
 
     "no-param-reassign": "off",
 
-    "no-control-regex": "off"
+    "no-control-regex": "off",
+
+    "one-var": "off"
   }
 }
