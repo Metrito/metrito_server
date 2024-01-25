@@ -12,6 +12,8 @@ const envVariablesSchema = z.object({
   DATABASE_URL: z.string(),
 
   PORT: z.coerce.number(),
+
+  ORIGINS: z.string().transform((origins) => origins.split(';')),
 });
 
 try {

@@ -37,7 +37,28 @@ export function configureSettings(app: Express) {
    *
    * https://www.npmjs.com/package/cors
    */
-  app.use(cors());
+  app.use(
+    cors({
+      origin: (requestOrigin, callback) => {
+        if (!requestOrigin) {
+          return callback(null, true);
+        }
+
+        const allowedOrigins = process.env.ORIGINS;
+
+        if (!allowedOrigins.includes(requestOrigin)) {
+          return callback(
+            new Error(
+              `Request from origin '${requestOrigin}' is not allowed by CORS`,
+            ),
+            false,
+          );
+        }
+
+        return callback(null, true);
+      },
+    }),
+  );
 
   /**
    * Block all requests that exceed the rate limit.
