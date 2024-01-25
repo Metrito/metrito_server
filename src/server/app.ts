@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { routesLogger } from '@infra/logger/routesLogger';
+import { routesLogger } from '@infra/old_logger/routesLogger';
 
 import { routes } from './routes';
 

@@ -6,6 +6,8 @@
   "rules": {
     "no-use-before-define": "off",
 
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+
+    "no-control-regex": "off"
   }
 }

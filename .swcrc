@@ -31,7 +31,10 @@
       "@factories": ["./src/factories"],
 
       "@infra/*": ["./src/infra/*"],
-      "@infra": ["./src/infra"]
+      "@infra": ["./src/infra"],
+
+      "@shared/*": ["./src/shared/*"],
+      "@shared": ["./src/shared"]
     }
   },
   "minify": true

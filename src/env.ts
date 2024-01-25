@@ -2,6 +2,10 @@ import 'dotenv/config';
 import chalk from 'chalk';
 import { ZodError, z } from 'zod';
 
+import { mainLogger } from '@infra/logger';
+
+const logger = mainLogger.context('ENV', chalk.rgb(138, 11, 49));
+
 const envVariablesSchema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']),
 
@@ -19,17 +23,18 @@ try {
     ...parsed,
   };
 
-  console.info('Environment variables loaded.');
+  logger.info('Environment variables loaded.');
 } catch (err: Error | unknown) {
   if (err instanceof ZodError) {
     const variables: { env: string; message: string }[] = err.issues.map(
       (issue) => ({ env: issue.path.join('.'), message: issue.message }),
     );
 
-    console.error(chalk.red.bold('\nWrong environment variables:'));
+    console.info('');
+    logger.error(chalk.red.bold('Wrong environment variables:'));
 
     variables.forEach((variable) => {
-      console.error(
+      logger.error(
         chalk.gray('-'),
         chalk.white(`${variable.env}:`),
         variable.message,
@@ -44,7 +49,6 @@ try {
 
 declare global {
   namespace NodeJS {
-    // @ts-expect-error
     interface ProcessEnv extends z.infer<typeof envVariablesSchema> {}
   }
 }

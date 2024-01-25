@@ -1,5 +1,11 @@
+import chalk from 'chalk';
+
+import { mainLogger } from '@infra/logger';
+
 import { app } from './app';
 import { listen } from './appListenFunction';
+
+const logger = mainLogger.context('SERVER', chalk.cyan);
 
 const port = process.env.PORT;
 
@@ -10,11 +16,11 @@ const port = process.env.PORT;
  * essential for the complete functioning of the server.
  */
 async function main() {
-  console.info('Starting server...');
+  logger.info('Starting server...');
 
   await listen(app, port);
 
-  console.info(`Server is running on port ${port}`);
+  logger.info(`Server is running on port ${chalk.yellow(port)}`);
 }
 
 main();
