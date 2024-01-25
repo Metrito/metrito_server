@@ -1,3 +1,11 @@
+/**
+ * Tipos de logs:
+ * - Activity logs: são todos os logs que acontece na aplicação, sem filtro.
+ * - Error logs: são todos os logs de erros que acontecem na aplicação.
+ * - HTTP Error logs: são todos os logs de erros gerados automaticamente
+ *   por alguma requisição HTTP que foi finalizada com status de erro (400~599)
+ */
+
 import { Chalk } from 'chalk';
 import { clone } from 'lodash';
 import winston, { createLogger } from 'winston';

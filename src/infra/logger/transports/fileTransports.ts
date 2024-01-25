@@ -1,9 +1,3 @@
-/**
- * - Activity logs: são todos os logs que acontece na aplicação, sem filtro.
- * - Error logs: são todos os logs de erros que acontecem na aplicação.
- * - HTTP Error logs: são todos os logs de erros que acontecem nas requisições.
- */
-
 import path from 'node:path';
 
 import moment from 'moment';
