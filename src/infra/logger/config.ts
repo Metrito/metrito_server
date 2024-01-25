@@ -21,6 +21,16 @@ const loggerConfig = {
   STORE_ERROR_LOGS: true,
 
   /**
+   * True para armazenar os logs de erros de requisições http em logs/http_errors.
+   */
+  STORE_HTTP_ERROR_LOGS: true,
+
+  /**
+   * True para armazenar, além de requisições http de status 500, também 400.
+   */
+  INCLUDES_400_ERRORS: true,
+
+  /**
    * Diretório que ficarão salvo os logs localmente.
    */
   LOGS_DIR,
