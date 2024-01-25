@@ -20,6 +20,8 @@ import winston, { createLogger } from 'winston';
 import addTransports from './addTransports';
 import loggerConfig from './config';
 import { consoleTransports } from './transports/consoleTransports';
+import { databaseHttpTransports } from './transports/databaseHttpTransports';
+import { databaseTransports } from './transports/databaseTransports';
 import { fileHttpTransports } from './transports/fileHttpTransports';
 import { fileTransports } from './transports/fileTransports';
 
@@ -35,6 +37,7 @@ function buildLogger() {
 
   addTransports(loggerMainInstance, consoleTransports);
   addTransports(loggerMainInstance, fileTransports);
+  addTransports(loggerMainInstance, databaseTransports);
 
   type Logger = winston.Logger & {
     context: (context: string, color?: Chalk) => winston.Logger;
@@ -58,7 +61,7 @@ function buildLogger() {
  */
 function buildExpressLogger() {
   const loggerMiddleware = expressWinston.logger({
-    transports: [...fileHttpTransports],
+    transports: [...fileHttpTransports, ...databaseHttpTransports],
     statusLevels: true,
     meta: true,
     expressFormat: true,
