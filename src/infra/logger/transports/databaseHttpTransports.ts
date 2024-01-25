@@ -55,6 +55,7 @@ const databaseHttpTransports: Transport[] = [];
 if (loggerConfig.DATABASE_STORE_HTTP_ERROR_LOGS) {
   databaseHttpTransports.push(
     new transports.MongoDB({
+      options: { useUnifiedTopology: true },
       db: loggerConfig.DATABASE_URL,
       collection: loggerConfig.HTTP_ERROR_LOGS_COLLECTION,
       format: databaseHttpFormat,

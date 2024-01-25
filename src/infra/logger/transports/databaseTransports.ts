@@ -73,6 +73,7 @@ const databaseTransports: Transport[] = [];
 if (loggerConfig.DATABASE_STORE_ACTIVITY_LOGS) {
   databaseTransports.push(
     new transports.MongoDB({
+      options: { useUnifiedTopology: true },
       db: loggerConfig.DATABASE_URL,
       collection: loggerConfig.ACTIVITY_LOGS_COLLECTION,
       format: databaseFormat,
@@ -83,6 +84,7 @@ if (loggerConfig.DATABASE_STORE_ACTIVITY_LOGS) {
 if (loggerConfig.DATABASE_STORE_ERROR_LOGS) {
   databaseTransports.push(
     new transports.MongoDB({
+      options: { useUnifiedTopology: true },
       db: loggerConfig.DATABASE_URL,
       collection: loggerConfig.ERROR_LOGS_COLLECTION,
       format: databaseFormat,
