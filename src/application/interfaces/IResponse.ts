@@ -1,4 +1,4 @@
 export default interface IResponse {
   statusCode: number;
-  body: Record<string, any>;
+  body: Record<string, any> | null;
 }
